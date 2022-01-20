@@ -2,6 +2,12 @@ import gym_super_mario_bros
 from nes_py.wrappers import JoypadSpace
 from gym_super_mario_bros.actions import SIMPLE_MOVEMENT
 
+
+from gym.wrappers import FrameStack, GrayScaleObservation #Stack Frames (our AI will be able
+#to see. GrayScaleObservation to convert images in gray)
+from stable_baselines3.common.vec_env import VecFrameStack, DummyVecEnv
+from matplotlib import pyplot as plt
+
 #print(SIMPLE_MOVEMENT) #7 different types of actions
 
 env = gym_super_mario_bros.make('SuperMarioBros-v0')
