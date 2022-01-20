@@ -9,11 +9,14 @@ env = JoypadSpace(env, SIMPLE_MOVEMENT) #Wrapping environment to use simple acti
 #print(env.action_space)
 print(env.observation_space.shape) #Observation we get
 
+#Running the game
+"""
 done = True
-for step in range(100000):
+for step in range(100000): #Loop through each frame in the game
     if done:
         env.reset()
     state, reward, done, info = env.step(env.action_space.sample())
     env.render()
 
-env.close()     
+env.close()
+"""
