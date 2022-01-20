@@ -4,7 +4,7 @@ from gym_super_mario_bros.actions import SIMPLE_MOVEMENT
 
 
 from gym.wrappers import FrameStack, GrayScaleObservation #Stack Frames (our AI will be able
-#to see. GrayScaleObservation to convert images in gray)
+#to see. GrayScaleObservation to convert images in gray = less data to process)
 from stable_baselines3.common.vec_env import VecFrameStack, DummyVecEnv
 from matplotlib import pyplot as plt
 
