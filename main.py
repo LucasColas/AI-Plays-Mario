@@ -20,3 +20,8 @@ for step in range(100000): #Loop through each frame in the game
 
 env.close()
 """
+
+
+"""
+Preprocessing
+"""
