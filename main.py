@@ -71,10 +71,10 @@ Our AI
 """
 
 
-
+#Save models
 class TrainAndLoggingCallback(BaseCallback):
 
-    def __init__(self, check_freq, save_path, verbose=1):
+    def __init__(self, check_freq, save_path, verbose=1): #check_freq : how often we save our model
         super(TrainAndLoggingCallback, self).__init__(verbose)
         self.check_freq = check_freq
         self.save_path = save_path
