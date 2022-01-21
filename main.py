@@ -13,8 +13,6 @@ from matplotlib import pyplot as plt
 #Create environment
 env = gym_super_mario_bros.make('SuperMarioBros-v0')
 
-#Simplify the controls
-env = JoypadSpace(env, SIMPLE_MOVEMENT) #Wrapping environment to use simple actions
 #print(env.action_space)
 print(env.observation_space.shape) #Observation we get
 
@@ -34,3 +32,6 @@ env.close()
 """
 Preprocessing
 """
+
+#Simplify the controls
+env = JoypadSpace(env, SIMPLE_MOVEMENT) #Wrapping environment to use simple actions
