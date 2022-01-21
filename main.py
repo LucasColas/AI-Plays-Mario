@@ -89,3 +89,5 @@ class TrainAndLoggingCallback(BaseCallback):
             self.model.save(model_path)
 
         return True
+Dir_save = './train/'
+Dir_logs = './logs/'
