@@ -16,6 +16,8 @@ env = gym_super_mario_bros.make('SuperMarioBros-v0')
 #print(env.action_space)
 print(env.observation_space.shape) #Observation we get
 
+plt.imshow(env.reset())
+plt.show()
 #Running the game
 """
 done = True
@@ -37,5 +39,7 @@ Preprocessing
 env = JoypadSpace(env, SIMPLE_MOVEMENT) #Wrapping environment to use simple actions
 
 #Grayscaling
-env = GrayScaleObservation(env, keep_dim=True)
+env = GrayScaleObservation(env, keep_dim=True) #Keep dim to be able to do stackframe
 print("after grayscaling",env.reset().shape)
+plt.imshow(env.reset())
+plt.show()
