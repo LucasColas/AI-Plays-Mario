@@ -58,3 +58,9 @@ for i in range(state.shape[3]):
     plt.subplot(1,4,i+1)
     plt.imshow(state[0][:,:,i])
 plt.show() #if we see only x images, that's because we ran our environment x times.
+
+
+
+"""
+Our AI
+"""
