@@ -89,5 +89,7 @@ class TrainAndLoggingCallback(BaseCallback):
             self.model.save(model_path)
 
         return True
-Dir_save = './train/'
-Dir_logs = './logs/'
+Save_Dir = './train/'
+Logs_Dir = './logs/'
+
+callback = TrainAndLoggingCallback(check_freq=10000, save_path=Save_Dir) #Every 10000 steps we save our model
