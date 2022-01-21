@@ -35,3 +35,7 @@ Preprocessing
 
 #Simplify the controls
 env = JoypadSpace(env, SIMPLE_MOVEMENT) #Wrapping environment to use simple actions
+
+#Grayscaling
+env = GrayScaleObservation(env, keep_dim=True)
+print("after grayscaling",env.reset().shape)
