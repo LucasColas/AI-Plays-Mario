@@ -8,6 +8,11 @@ from gym.wrappers import GrayScaleObservation #Stack Frames (our AI will be able
 from stable_baselines3.common.vec_env import VecFrameStack, DummyVecEnv
 from matplotlib import pyplot as plt
 
+import os
+from stable_baselines3 import PPO #RL algorithm
+from stable_baselines3.common.callbacks import BaseCallback #for saving models
+
+
 #print(SIMPLE_MOVEMENT) #7 different types of actions
 
 #Create environment
