@@ -57,13 +57,14 @@ print("new shape : ", env.reset().shape)
 env = VecFrameStack(env, 4, channels_order='last') #We choose to stack 4 frames.
 print(env.reset().shape) #(1,x,y,4) because we stacked 4 frames
 
+"""
 state, reward, done, info = env.step([env.action_space.sample()]) #in a list because we vectorized our environment
 plt.figure(figsize=(6,4))
 for i in range(state.shape[3]):
     plt.subplot(1,4,i+1)
     plt.imshow(state[0][:,:,i])
 plt.show() #if we see only x images, that's because we ran our environment x times.
-
+"""
 
 
 """
@@ -97,3 +98,5 @@ callback = TrainAndLoggingCallback(check_freq=10000, save_path=Save_Dir) #Every 
 
 #AI model
 model = PPO('CnnPolicy', env, verbose=1, tensorboard_log=Logs_Dir, learning_rate=0.000001, n_steps=512)
+
+model.learn(total_timesteps=1000000, callback=callback)
