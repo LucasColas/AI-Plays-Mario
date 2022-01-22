@@ -99,4 +99,4 @@ callback = TrainAndLoggingCallback(check_freq=10000, save_path=Save_Dir) #Every 
 #AI model
 model = PPO('CnnPolicy', env, verbose=1, tensorboard_log=Logs_Dir, learning_rate=0.000001, n_steps=512)
 
-model.learn(total_timesteps=1000000, callback=callback)
+model.learn(total_timesteps=1000000, callback=callback) #callback is optional
