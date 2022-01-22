@@ -93,3 +93,7 @@ Save_Dir = './train/'
 Logs_Dir = './logs/'
 
 callback = TrainAndLoggingCallback(check_freq=10000, save_path=Save_Dir) #Every 10000 steps we save our model
+
+
+#AI model
+model = PPO('CnnPolicy', env, verbose=1, tensorboard_log=Logs_Dir, learning_rate=0.000001, n_steps=512)
