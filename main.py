@@ -108,7 +108,6 @@ if train:
 else:
     model = PPO.load('./train/best_model_70000')
 
-
     state = env.reset()
     run = True
     while run:
