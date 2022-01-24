@@ -109,6 +109,6 @@ model = PPO.load('./train/best_model_70000')
 state = env.reset()
 run = True
 while run:
-    action, state = model.predict(state)
+    action, _state = model.predict(state)
     state, reward, done, info = env.step(action)
     env.render()
