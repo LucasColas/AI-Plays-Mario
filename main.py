@@ -101,12 +101,12 @@ train = True
 if train:
     model = PPO('CnnPolicy', env, verbose=1, tensorboard_log=Logs_Dir, learning_rate=0.000001, n_steps=512)
 
-    model.learn(total_timesteps=1000000, callback=callback) #callback is optional
+    model.learn(total_timesteps=1200000, callback=callback) #callback is optional
 
 
 #Test Model
 else:
-    model = PPO.load('./train/best_model_70000')
+    model = PPO.load('./train/best_model_990000')
 
     state = env.reset()
     run = True
