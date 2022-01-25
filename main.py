@@ -90,6 +90,7 @@ class TrainAndLoggingCallback(BaseCallback):
             self.model.save(model_path)
 
         return True
+
 Save_Dir = './train/'
 Logs_Dir = './logs/'
 
@@ -97,11 +98,10 @@ callback = TrainAndLoggingCallback(check_freq=10000, save_path=Save_Dir) #Every 
 
 
 #AI model
-train = True
+train = False
 if train:
     model = PPO('CnnPolicy', env, verbose=1, tensorboard_log=Logs_Dir, learning_rate=0.000001, n_steps=512)
-
-    model.learn(total_timesteps=1200000, callback=callback) #callback is optional
+    model.learn(total_timesteps=3000000, callback=callback) #callback is optional
 
 
 #Test Model
