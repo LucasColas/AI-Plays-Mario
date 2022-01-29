@@ -3,9 +3,9 @@ from nes_py.wrappers import JoypadSpace
 from gym_super_mario_bros.actions import SIMPLE_MOVEMENT
 
 
-from gym.wrappers import GrayScaleObservation #Stack Frames (our AI will be able
-#to see. GrayScaleObservation to convert images in gray = less data to process)
-from stable_baselines3.common.vec_env import VecFrameStack, DummyVecEnv
+from gym.wrappers import GrayScaleObservation
+from stable_baselines3.common.vec_env import VecFrameStack, DummyVecEnv #(our AI will be
+#able to see. GrayScaleObservation to convert images in gray = less data to process)
 from matplotlib import pyplot as plt
 
 import os
